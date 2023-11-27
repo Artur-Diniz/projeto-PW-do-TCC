@@ -1,0 +1,44 @@
+<app-header></app-header>
+
+
+<h1 class="my-3 text-primary">
+    Listar Ecopontos
+    <button type="button" class="btn btn-sucess mt-2 float-right" routerLink="/ecopontos/cadastrarecopontos"> Cadastrar
+        Ecopontos</button>
+</h1>
+
+<div class="card shadow">
+    <table class="table table-responsive table striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>horario Funcionamento inicio</th>
+                <th>horario Funcionamento fim</th>
+                <th>Endereço</th>
+                <th>Numero Endereço</th>
+            </tr>
+
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let eco of ObjEcopontos">
+            <tr *ngFor="let eco of ObjEcopontos">
+                <td>{{eco.IdEcoponto}}</td>
+                <td>{{eco.EcopontoNome}}</td>
+                <td>{{eco.HoraFunIn}}</td>
+                <td>{{eco.HoraFunFim}}</td>
+                <td>{{eco.Endereco}}</td>
+                <td>{{eco.NumEndereco}}</td>
+                <td>
+                    <button class="btn btn-warning">
+                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                    </button>
+                    <button class="btn btn-warning">
+                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

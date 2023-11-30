@@ -8,8 +8,8 @@ import { CadastrarEcopontosComponent } from './components/ecopontos/cadastrar-ec
 
 const routes: Routes = [
   {path:'', component:HomeComponent},
-  {path:'ecopontos/Ecopontos', component:ListarEcopontosComponent},
-  {path:'ecopontos/CadastrarEcopontos', component:CadastrarEcopontosComponent},
+  {path:'Ecopontos/Ecopontos', component:ListarEcopontosComponent},
+  {path:'Ecopontos/CadastrarEcopontos', component:CadastrarEcopontosComponent},
 ];
 
 @NgModule({

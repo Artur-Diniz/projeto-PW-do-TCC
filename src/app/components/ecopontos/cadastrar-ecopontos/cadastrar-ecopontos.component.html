@@ -1,6 +1,55 @@
+
+    
 <h1 class="my-3 text-primary"> Cadastrar Ecoponto</h1>
 
 <div class="card shadow">
-    <form > </form>
-
+    <form>
+        <div class="row">
+            <div class="col-md-10">
+                <div class="form-group">
+                    <label for="nome">Nome do Ecoponto</label>
+                    <input type="text" class="form-control" placeholder="Digite o nome do Ecoponto">
+                </div>
+            </div>
+        </div> <!-- fim da Row-->
+        <div class="row">
+            <div class="col-md-5">
+                <div class="form-group">
+                    <label for="HoraFuncIn">Hora Funcionamento Inicio:</label>
+                    <input type="number" class="form-control" placeholder=" 00.00" />
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="form-group">
+                    <label for="HoraFuncFim">Hora Funcionamento Fim:</label>
+                    <input type="number" class="form-control" placeholder=" 00.00" />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-7">
+                <div class="form-group">
+                    <label for="Endereco">Endereço do Ecoponto</label>
+                    <input type="text" class="form-control" placeholder="Av.Paulista">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="NumEndereco">Numero do endereço do Ecoponto</label>
+                    <input type="number" class="form-control" placeholder=" 1101">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-default" routerLink="/Ecopontos/Ecopontos">
+                     Volar
+                </button>
+            <div class="col">
+                <button class="btn btn-sucess float-right" >
+                     Salvar
+                </button>
+            </div>
+        </div>
 </div>
+

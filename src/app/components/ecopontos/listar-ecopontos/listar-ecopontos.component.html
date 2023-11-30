@@ -1,9 +1,7 @@
-<app-header></app-header>
-
-
+<body>
 <h1 class="my-3 text-primary">
     Listar Ecopontos
-    <button type="button" class="btn btn-sucess mt-2 float-right" routerLink="/ecopontos/cadastrarecopontos"> Cadastrar
+    <button type="button" class="btn btn-sucess mt-2 float-right" routerLink="/Ecopontos/CadastrarEcopontos"> Cadastrar
         Ecopontos</button>
 </h1>
 
@@ -17,6 +15,7 @@
                 <th>horario Funcionamento fim</th>
                 <th>Endereço</th>
                 <th>Numero Endereço</th>
+                <th>Açôes</th>
             </tr>
 
         </thead>
@@ -26,8 +25,8 @@
             <tr *ngFor="let eco of ObjEcopontos">
                 <td>{{eco.IdEcoponto}}</td>
                 <td>{{eco.EcopontoNome}}</td>
-                <td>{{eco.HoraFunIn}}</td>
-                <td>{{eco.HoraFunFim}}</td>
+                <td >{{eco.HoraFuncIn | number: '2.2' }}</td>
+                <td>{{eco.HoraFuncFim| number: '2.2'}}</td>
                 <td>{{eco.Endereco}}</td>
                 <td>{{eco.NumEndereco}}</td>
                 <td>
@@ -42,3 +41,5 @@
         </tbody>
     </table>
 </div>
+
+</body>

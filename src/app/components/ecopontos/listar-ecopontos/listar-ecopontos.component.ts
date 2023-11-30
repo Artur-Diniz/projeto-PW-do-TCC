@@ -1,33 +1,42 @@
+import { Observable } from 'rxjs';
+import { EcopontosService } from 'src/app/services/ecopontos.service';
 import { Component, OnInit } from '@angular/core';
+import { Iecopontos} from '../../../model/IEcoponto.model'
+
 
 @Component({
   selector: 'app-listar-ecopontos',
   templateUrl: './listar-ecopontos.component.html',
   styleUrls: ['./listar-ecopontos.component.css']
+  
 })
 export class ListarEcopontosComponent implements OnInit {
 
-  listaStrings: string[] = ['Primeiro', 'Segundo', 'Terceiro'];
-  listaNumeros: number[] = [15, 15.08, 100];
-
-  ObjEcopontos: any[] = [
-    {EcopontoNome: 'Ecoponto Tatuapé',HoraFuncIn: 8.00,HoraFuncFim: 18.00, Endereco: 'Av.Salim Farah',NumEndereco:179,IdEcoponto: 1001}
+  listaEcopontos: Iecopontos[] = [
+ 
   
-  ];
+  ]
 
-  constructor() {
-    for (let item of this.listaStrings) {
-      console.log(item);
+  constructor(private ecopontosService: EcopontosService) {
+    
 
-    }
-
-    for (const item of this.listaNumeros){
+    for (let item of this.listaEcopontos)
+    {
       console.log(item);
     }
 
   }
 
+
   ngOnInit(): void {
+    this.carregarEcopontos();
+  }
+  
+  carregarEcopontos(): void{
+    this.ecopontosService.buscarTodos().subscribe(retorno =>{
+      this.listaEcopontos = retorno;
+    })
+
   }
 
 }

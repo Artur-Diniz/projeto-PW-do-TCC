@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Iecopontos } from 'src/app/model/IEcoponto.model';
 import { EcopontosService } from 'src/app/services/ecopontos.service';
 
+
 @Component({
   selector: 'app-cadastrar-ecopontos',
   templateUrl: './cadastrar-ecopontos.component.html',
@@ -30,10 +31,10 @@ export class CadastrarEcopontosComponent implements OnInit {
     this.ecoponto = retorno;
     this.ecopontoservice.exibirMensagem(
       'Sistema',
-      `${this.ecoponto.EcopontoNome} foi cadastrado com sucesso. ID:{this.ecoponto.id}`,
+      `${this.ecoponto.EcopontoNome} foi cadastrado com sucesso. ID: ${this.ecoponto.id}`,
       'toast-sucess'
     );
-    this.router.navigate(['/produtos']);
+    this.router.navigate(['/Ecopontos/Ecopontos']);
     
 
 

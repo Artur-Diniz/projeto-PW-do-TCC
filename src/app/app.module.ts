@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {HttpClientModule} from '@angular/common/http';
 
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { AppRoutingModule } from './app-routing.module';
@@ -11,6 +12,7 @@ import { ListarEcopontosComponent } from './components/ecopontos/listar-ecoponto
 import { HomeComponent } from './components/ecopontos/home/home.component';
 import { HeaderComponent } from './template/header/header.component';
 import { FormsModule } from '@angular/forms';
+import { AtualizarEcopontoComponent } from './components/ecopontos/atualizar-ecoponto/atualizar-ecoponto.component';
 
 @NgModule({
   declarations: [
@@ -19,16 +21,21 @@ import { FormsModule } from '@angular/forms';
     CadastrarEcopontosComponent,
     ListarEcopontosComponent,
     HomeComponent,
-    HeaderComponent
+    HeaderComponent,
+    AtualizarEcopontoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule,   BrowserAnimationsModule, // required animations module
-    ToastrModule.forRoot(), // ToastrModule added
-
+    HttpClientModule,  
+     BrowserAnimationsModule, // required animations module
+    ToastrModule.forRoot(),
+    SweetAlert2Module.forRoot(), // ToastrModule added
+    SweetAlert2Module,
+    
   ],
+  
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -19,11 +19,38 @@ export class EcopontosService {
       map(retorno => retorno),
       catchError(erro => this.exibirErro(erro))
     );
+    
+
+  }
+  
+  buscarPorId(id: Number ): Observable<Iecopontos> {
+    return this.http.get<Iecopontos>(`${this.Url}/${id}`).pipe(
+      map(retorno => retorno),
+      catchError(erro => this.exibirErro(erro))
+    );
+    
 
   }
 
   cadastrar(ecoponto: Iecopontos):Observable<Iecopontos>{
     return this.http.post<Iecopontos>(this.Url,ecoponto ).pipe(
+      map(retorno => retorno),
+      catchError(erro => this.exibirErro(erro))
+      );
+
+  }
+
+  
+  Atualizar(ecoponto: Iecopontos):Observable<Iecopontos>{
+    return this.http.put<Iecopontos>(`${this.Url}/${ecoponto.id}`,ecoponto).pipe(
+      map(retorno => retorno),
+      catchError(erro => this.exibirErro(erro))
+      );
+
+  }
+
+  Excluir(id: number):Observable<any>{
+    return this.http.delete<any>(`${this.Url}/${id}`).pipe(
       map(retorno => retorno),
       catchError(erro => this.exibirErro(erro))
       );

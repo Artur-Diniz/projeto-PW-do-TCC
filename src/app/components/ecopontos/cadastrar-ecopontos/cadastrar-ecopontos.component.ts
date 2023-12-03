@@ -13,10 +13,7 @@ export class CadastrarEcopontosComponent implements OnInit {
 
   ecoponto: Iecopontos = {
     EcopontoNome: '',
-    HoraFuncIn: 0,
-    HoraFuncFim: 0,
     Endereco: '',
-    NumEndereco: 0
 
   };
 
